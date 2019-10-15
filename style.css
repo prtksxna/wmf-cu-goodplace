@@ -1,0 +1,147 @@
+html,
+body {
+  font-size: 14px;
+  font-family: sans-serif;
+  background: #f6f6f6;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+h1 {
+  font-family: 'Linux Libertine','Georgia','Times',serif;
+  font-weight: normal;
+  border-bottom: 1px solid #A2A9B1;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+a {
+  color: #36c;
+  text-decoration: none;
+}
+
+main {
+  background: #fff;
+  margin-top: 50px;
+  margin-left: 180px;
+  margin-bottom: 100px;
+  padding: 20px 30px;
+  border: 1px solid #A7D7F9;
+  border-right: none;
+  min-height: 100%;
+}
+
+form {
+  border: 1px solid #a2a9b1;
+  border-radius: 2px;
+  padding: 20px;
+}
+
+ul.tabs {
+  list-style: none;
+  padding: 0;
+  border-bottom: 1px solid #A2A9B1;
+}
+
+ul.tabs li {
+  display: inline-block;
+}
+
+ul.tabs li a {
+  color: #000;
+  display: inline-block;
+  padding: 7px 10px;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 2px solid #fff;
+}
+
+ul.tabs li a.active {
+  color: #36c;
+  border-color: #36c;
+}
+
+table.check {
+  width: 960px;
+  border-left: 1px solid #72777d;
+  border-right: 1px solid #72777d;
+}
+
+table.check td {
+  vertical-align: top;
+  padding: 8px;
+  border-bottom: 1px solid #a2a9b1;
+  background: #F8F9FA;
+}
+
+table.check tr.main td {
+  border-top: 2px solid #72777d;
+}
+
+table.check td.user {
+  width: 200px;
+  border-right: 1px solid #a2a9b1;
+  font-weight: bold;
+  background: #EAECF0;
+}
+
+table.check td.user small {
+  font-weight: normal;
+}
+
+table.check td[data-data^="b-"],
+table.check td[data-data^="o-"],
+table.check td[data-data^="d-"] {
+  width: 150px;
+}
+
+table.check td[data-data^="d-"] {
+  text-align: right;
+}
+
+table.check td[data-data^="ip-"] {
+  width: 300px;
+  padding-left: 20px;
+}
+
+table.check td[data-data^="w-"] {
+  width: 150px;
+  padding-left: 20px;
+}
+
+table.check td[data-data^="d-"] small {
+  color: #72777d;
+}
+
+.check td.highlight {
+  font-weight: bold;
+}
+
+table.check tr.highlight td,
+table.check td.highlight-user {
+  background: #fc3 !important;
+}
+
+.notice {
+  width: 920px;
+  margin-top: 10px;
+  background: #eaf3ff;
+  padding: 20px;
+  border: 1px solid #36c;
+  border-radius: 2px;
+}
+
+.notice a {
+  float: right;
+  display: inline-block;
+  border-radius: 2px;
+  color: white;
+  background: #36c;
+  padding: 10px;
+  font-weight: bold;
+  margin-top: -10px;
+}

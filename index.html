@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Special:Investigate</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/oojs/dist/oojs.min.js"></script>
+    <script src="node_modules/oojs-ui/dist/oojs-ui.js"></script>
+    <script src="node_modules/oojs-ui/dist/oojs-ui-wikimediaui.js"></script>
+
+    <link rel="stylesheet" href="node_modules/oojs-ui/dist/oojs-ui-wikimediaui.css">
+
+    <script src="brain.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Special:Investigate</h1>
+      <form id="form">
+        <h2>Look-up users and their activity</h2>
+      </form>
+
+      <ul class="tabs">
+        <li><a href="#" class="active">Check</a></li>
+        <li><a href="compare.html">Compare</a></li>
+        <li><a href="timeline.html">Timeline</a></li>
+      </ul>
+
+
+      <table class="check" cellspacing="0" cellpadding="0">
+        <tr class="main">
+          <td rowspan="3" class="user"><a href="#">Apples</a><small> (<a href="#">Global Contributions</a>)</small></td>
+          <td data-data="d-30aug2013">30 August 2013</td>
+          <td data-data="w-mw"><a href="#">mediawiki.org</a></td>
+          <td><a href="#">44 edits</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td data-data="d-3sep2013"><small>3 September 2013</small></td>
+          <td data-data="w-hi"><a href="#">hi.wikipedia.org</a></td>
+          <td><a href="#">232 edits</a></td>
+          <td>blocked</td>
+        </tr>
+        <tr>
+          <td data-data="d-12sep2013"><small>12 September 2013</small></td>
+          <td data-data="w-wd"><a href="#">wikidata.org</a></td>
+          <td><a href="#">71 edits</a></td>
+          <td></td>
+        </tr>
+
+        <tr class="main">
+          <td rowspan="2" class="user"><a href="#">Oranges</a><small> (<a href="#">Global Contributions</a>)</small></td>
+          <td data-data="d-5jan2016">5 January 2016</td>
+          <td data-data="w-mw"><a href="#">mediawiki.org</a></td>
+          <td><a href="#">5 edits</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td data-data="d-24sep2013"><small>24 September 2013</small></td>
+          <td data-data="w-wd"><a href="#">wikidata.org</a></td>
+          <td><a href="#">801 edits</a></td>
+          <td></td>
+        </tr>
+
+        <tr class="main">
+          <td class="user"><a href="#">Grapes</a><small> (<a href="#">Global Contributions</a>)</small></td>
+          <td data-data="d-12sep2013">12 September 2013</td>
+          <td data-data="w-en"><a href="#">en.wikipedia.org</a></td>
+          <td><a href="#">324 edits</a></td>
+          <td></td>
+        </tr>
+      </table>
+
+    </main>
+  </body>
+</html>
