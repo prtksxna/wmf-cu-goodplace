@@ -48,6 +48,61 @@ $(function(){
   );
 });
 
+$(function () {
+  if ( $('#filter').length < 1 ) return false;
+
+  var filter = new OO.ui.MenuTagMultiselectWidget( {
+    inputPosition: 'outline',
+    allowArbitrary: false,
+    options: [
+      {
+        data: '',
+        label: 'BROWSERS'
+      },
+      {
+        data: 'asd',
+        label: 'Firefox'
+      },
+      {
+        data: 'jkl',
+        label: 'Chrome'
+      },
+      {
+        data: '',
+        label: 'OS'
+      },
+      {
+        data: 'win',
+        label: 'Windows'
+      },
+      {
+        data: 'andr',
+        label: 'Android'
+      }
+    ]
+  } )
+
+  var daterange = new OO.ui.DropdownInputWidget( {
+	options: [
+		{
+			data: 'a',
+			label: '90 days'
+		},
+		{
+			data: 'b',
+			label: '30 days'
+		},
+		{
+			data: 'c',
+			label: '7 days'
+		}
+	],
+	value: 'a'
+} )
+
+  $('#filter').append( filter.$element, '<br><br>',daterange.$element);
+});
+
 
 $(function() {
 

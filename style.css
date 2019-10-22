@@ -90,6 +90,18 @@ table.check th {
   padding-right: 21px;
 }
 
+table.check td .tools {
+  opacity: 0;
+  transition: all 250ms ease;
+  display: block;
+  font-weight: normal;
+  font-size: 10px;
+}
+
+table.check td:hover .tools {
+  opacity: 1;
+}
+
 table.check th:last-child {
   border-right: none;
 }
