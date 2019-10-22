@@ -1,7 +1,7 @@
 $(function(){
   var users = new OO.ui.FieldLayout(
     new OO.ui.TagMultiselectWidget( {
-      placeholder: 'Add users or IP addresses',
+      placeholder: 'Add users',
       allowArbitrary: true,
       selected: [ 'Apples', 'Oranges', 'Grapes' ]
     } ), {
@@ -46,6 +46,106 @@ $(function(){
     '<br>',
     submit.$element
   );
+});
+
+$(function () {
+  if ( $('#timefilters').length < 1 ) return false;
+
+  var users = new OO.ui.FieldLayout(
+    new OO.ui.TagMultiselectWidget( {
+      placeholder: 'Add users or IP addresses',
+      allowArbitrary: true,
+      selected: [ 'Prtksxna' ]
+    } ), {
+      align: 'top',
+      label: 'Usernames'
+    }
+  );
+
+  var pages = new OO.ui.FieldLayout(
+    new OO.ui.TagMultiselectWidget( {
+      allowArbitrary: true,
+      selected: [ 'Mikhail Bakunin', 'Emma Goldman', 'Noam Chomsky' ]
+    } ), {
+      align: 'top',
+      label: 'Pages',
+    }
+  );
+
+  var activity = new OO.ui.FieldLayout(
+    new OO.ui.DropdownInputWidget( {
+      options: [
+        {
+          data: 'a',
+          label: 'All'
+        },
+        {
+          data: 'b',
+          label: 'Edits'
+        },
+        {
+          data: 'c',
+          label: 'Blocks'
+        }
+      ],
+      value: 'b'
+    } ),
+    {
+      align: 'top',
+      label: 'Type of activity'
+    }
+  );
+
+  var fromDate = new OO.ui.FieldLayout(
+    new OO.ui.TextInputWidget({icon:'calendar'}),
+    {
+      align: 'top',
+      label: 'From date'
+    }
+  );
+
+  var toDate = new OO.ui.FieldLayout(
+    new OO.ui.TextInputWidget({icon:'calendar'}),
+    {
+      align: 'top',
+      label: 'To date'
+    }
+  );
+
+  var ua = new OO.ui.FieldLayout(
+    new OO.ui.MenuTagMultiselectWidget( {
+	     allowArbitrary: false,
+	     allowDisplayInvalidTags: true,
+	     options: [
+         {
+           data: 'o',
+           label: 'Opera'
+         },
+         {
+           data: 'c',
+           label: 'Chrome'
+         },
+         {
+           data: 'ff',
+           label: 'Firefox'
+         }
+       ]
+    } ),
+    {
+     align: 'top',
+     label: 'Browsers'
+    }
+  );
+
+  $('#timefilters').append(
+    users.$element,
+    pages.$element,
+    fromDate.$element,
+    toDate.$element,
+    ua.$element,
+    activity.$element
+  )
+
 });
 
 $(function () {
