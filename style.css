@@ -71,6 +71,7 @@ table.check {
   border-right: 1px solid #72777d;
 }
 
+table.check th,
 table.check td {
   vertical-align: top;
   padding: 8px;
@@ -78,8 +79,23 @@ table.check td {
   background: #F8F9FA;
 }
 
+table.check th {
+  background: #EAECF0;
+  border-top: 1px solid #72777d;
+  border-right: 1px solid #72777d;
+  background-image: url('res/sort_both.svg');
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center right;
+  padding-right: 21px;
+}
+
+table.check th:last-child {
+  border-right: none;
+}
+
 table.check tr.main td {
-  border-top: 2px solid #72777d;
+  border-top: 1px solid #72777d;
 }
 
 table.check td.user {

@@ -1,13 +1,22 @@
 $(function(){
   var users = new OO.ui.FieldLayout(
     new OO.ui.TagMultiselectWidget( {
-      placeholder: 'Add users',
+      placeholder: 'Add users or IP addresses',
       allowArbitrary: true,
       selected: [ 'Apples', 'Oranges', 'Grapes' ]
     } ), {
       align: 'top',
-      label: 'Users',
-      help: 'Enter users that you want to investigate'
+      label: 'Usernames or IP addresses',
+      help: 'Enter users that you want to investigate, alternatively enter an IP address or range to see all users using those addresses.'
+    }
+  );
+
+  var includeIPs = new OO.ui.FieldLayout(
+    new OO.ui.CheckboxInputWidget(),
+    {
+      align: 'inline',
+      label: 'Include all users who are using the above IPs',
+      help: 'What does this setting do??'
     }
   );
 
@@ -30,7 +39,13 @@ $(function(){
   } );
 
 
-  $('#form').append(users.$element, reason.$element, '<br>',submit.$element);
+  $('#form').append(
+    users.$element,
+    includeIPs.$element,
+    reason.$element,
+    '<br>',
+    submit.$element
+  );
 });
 
 
