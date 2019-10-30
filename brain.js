@@ -78,6 +78,13 @@ $(function(){
     $('#look-user').removeClass('active');
     $('#look-ip').addClass('active');
   });
+
+console.log(111);
+  if ( $('#thestuff').length < 1 ) return false;
+  $('#thestuff').hide();
+  submit.$element.click(function () {
+    $('#thestuff').show();
+  })
 });
 
 $(function () {
@@ -317,10 +324,7 @@ $(function () {
   }
 
   var d = new Date();
-  console.log(d.toLocaleTimeString());
-
   d.setSeconds(d.getSeconds() - 10000);
-  console.log(d.toLocaleTimeString());
 
   for (var i = 0; i < 100; i++) {
     var b = pickBytes();
@@ -344,4 +348,10 @@ $(function () {
 
     $('#timeline-list').append(html)
   }
+});
+
+$(function () {
+
+
+
 });
