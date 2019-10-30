@@ -94,7 +94,7 @@ $(function () {
       $img.attr('src', 'res/themes/wikimediaui/images/indicators/up.svg');
     }
   });
-
+  $('#timefilters-container').hide();
 
 // Filter form
   var users = new OO.ui.FieldLayout(

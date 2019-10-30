@@ -145,14 +145,15 @@ table.check td[data-data^="d-"] small {
   color: #72777d;
 }
 
-.check td.highlight {
-  font-weight: bold;
-}
-
 table.check tr.highlight td,
 table.check td.highlight-user {
-  background: #fc3 !important;
+  background: #fef6e7 !important;
 }
+table.check tr.highlight td.highlight,
+table.check td.highlight {
+  background-color: #fc3 !important;
+}
+
 
 .notice {
   width: 920px;
