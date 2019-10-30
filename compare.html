@@ -37,13 +37,18 @@
         <li><a href="timeline.html">Timeline</a></li>
       </ul>
 
+      <form id="timefilters">
+        <h2>
+          Filters
+          <a href="javascript:void(0);" id="filter-toggle">
+            <img src="res/themes/wikimediaui/images/indicators/up.svg" alt="">
+          </a>
+        </h2>
 
-      <form id="filter">
-        <h2>Filter and highlight results</h2>
+        <div id="timefilters-container"></div>
       </form>
 
       <br><br>
-
 
       <table class="check" cellspacing="0" cellpadding="0">
         <tr>
@@ -154,6 +159,12 @@
       <div class="notice">
         <img src="res/copy.svg" alt="" style="display: inline-block;float:left;padding-right: 10px;margin-top: -5px;">
         Would you like to copy this information as a Wikitext table?
+        <a href="#">Copy</a>
+      </div>
+
+      <div class="notice">
+        <img src="res/themes/wikimediaui/images/icons/userAnonymous.svg" alt="" style="display: inline-block;float:left;padding-right: 10px;margin-top: -5px;">
+        The IP range for all the above records is <strong>1.1.1.1/30</strong>. You can filter the above results to reduce the range.
         <a href="#">Copy</a>
       </div>
 

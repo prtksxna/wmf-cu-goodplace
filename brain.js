@@ -59,6 +59,7 @@ $(function(){
 
   $('#ip-form').append(
     ips.$element,
+    '<br>',    '<br>',
     reason.$element.clone(),
     '<br>',
     submit.$element.clone()
@@ -82,11 +83,25 @@ $(function(){
 $(function () {
   if ( $('#timefilters').length < 1 ) return false;
 
+  // Filter toggle
+  $('#filter-toggle').click(function () {
+    $('#timefilters-container').slideToggle();
+
+    var $img = $(this).find('img');
+    if ($img.attr('src') === 'res/themes/wikimediaui/images/indicators/up.svg' ) {
+      $img.attr('src', 'res/themes/wikimediaui/images/indicators/down.svg');
+    } else {
+      $img.attr('src', 'res/themes/wikimediaui/images/indicators/up.svg');
+    }
+  });
+
+
+// Filter form
   var users = new OO.ui.FieldLayout(
     new OO.ui.TagMultiselectWidget( {
       placeholder: 'Add users or IP addresses',
       allowArbitrary: true,
-      selected: [ 'Prtksxna' ]
+      selected: [ 'Oranges' ]
     } ), {
       align: 'top',
       label: 'Usernames'
@@ -168,11 +183,11 @@ $(function () {
     }
   );
 
-  $('#timefilters').append(
+  $('#timefilters-container').append(
     users.$element,
     pages.$element,
-    fromDate.$element,
-    toDate.$element,
+    //fromDate.$element,
+    //toDate.$element,
     ua.$element,
     activity.$element
   )
