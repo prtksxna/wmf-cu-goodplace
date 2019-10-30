@@ -1,4 +1,14 @@
 $(function(){
+
+  var ips = new OO.ui.FieldLayout(
+    new OO.ui.TextInputWidget({
+      placeholder: 'IP address or range'
+    }), {
+      align: 'top',
+      label: 'IP address'
+    }
+  )
+
   var users = new OO.ui.FieldLayout(
     new OO.ui.TagMultiselectWidget( {
       placeholder: 'Add users',
@@ -6,7 +16,7 @@ $(function(){
       selected: [ 'Apples', 'Oranges', 'Grapes' ]
     } ), {
       align: 'top',
-      label: 'Usernames or IP addresses',
+      label: 'Usernames',
       help: 'Enter users that you want to investigate, alternatively enter an IP address or range to see all users using those addresses.'
     }
   );
@@ -15,7 +25,7 @@ $(function(){
     new OO.ui.CheckboxInputWidget(),
     {
       align: 'inline',
-      label: 'Include all users who are using the above IPs',
+      label: 'Include all users who are using the same IPs as the selected users',
       help: 'What does this setting do??'
     }
   );
@@ -46,6 +56,27 @@ $(function(){
     '<br>',
     submit.$element
   );
+
+  $('#ip-form').append(
+    ips.$element,
+    reason.$element.clone(),
+    '<br>',
+    submit.$element.clone()
+  ).hide();
+
+  $('#look-user').click(function () {
+    $('#form').show();
+    $('#ip-form').hide();
+    $('#look-user').addClass('active');
+    $('#look-ip').removeClass('active');
+  });
+
+  $('#look-ip').click(function () {
+    $('#form').hide();
+    $('#ip-form').show();
+    $('#look-user').removeClass('active');
+    $('#look-ip').addClass('active');
+  });
 });
 
 $(function () {
