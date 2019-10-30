@@ -177,17 +177,19 @@ table.check td.highlight {
 
 .green {color: #006400;}
 .red {color: #8b0000;}
+.gray{ color: gray;}
 
 #timeline-list li {
   margin-top: 10px;
   padding: 3px;
 }
 
-#timeline-list a.hoo {
+#timeline-list .hoo {
   padding: 5px;
   border-radius: 10px;
 }
 
+#timeline-list span.highlight,
 #timeline-list a.highlight {
   background: #fc3;
 }

@@ -302,6 +302,12 @@ $(function () {
 
   var users = ['Apples', 'Oranges', 'Grapes'];
   var pages = ['Mikhail Bakunin', 'Emma Goldman', 'Noam Chomsky']
+  var uas = [
+    'Chrome 65 on Windows 10',
+    'HTC Browser on Android 6.0',
+    'Firefox 44 on Windows 10',
+    'Safari 8.5 on iOS 13'
+  ]
   var reason = [
     'Fixing typo',
     'Moving things around',
@@ -332,6 +338,7 @@ $(function () {
     var b = pickBytes();
     var bytesClass = (b > 0) ? 'green' : 'red';
     var u = pickRandom(users);
+    var ua = pickRandom(uas)
     var p = pickRandom(pages);
     var t = d.toLocaleTimeString();
     var r = pickRandom(reason);
@@ -345,6 +352,8 @@ $(function () {
       '<span class="'+bytesClass+'">(' + b + ')</span> . . ' +
       '<a href="#" class="hoo" data-data="'+u+'">' + u + '</a> (<a href="#">talk</a> | <a href="#">contribs</a>)' +
       ' . . ' +
+      '<span class="gray hoo" data-data="'+ua+'">(' + ua + ')</span>' +
+      ' . . ' +
       '(' + r + ')' +
     '</li>'
 
@@ -352,7 +361,7 @@ $(function () {
   }
 
 
-  $('#timeline-list a.hoo').on('mouseover',function () {
+  $('#timeline-list .hoo').on('mouseover',function () {
     var className = $(this).attr('data-data');
     var $pills = $('[data-data="' + className + '"]' );
 
@@ -360,7 +369,7 @@ $(function () {
     $pills.parent('li').addClass('highlight');
   });
 
-  $('#timeline-list a.hoo').on('mouseout',function () {
+  $('#timeline-list .hoo').on('mouseout',function () {
     var className = $(this).attr('data-data');
     var $pills = $('[data-data="' + className + '"]' );
 
