@@ -289,3 +289,59 @@ $(function() {
     $('td.user').removeClass('highlight-user');
   })
 });
+
+$(function () {
+  var users = ['Apples', 'Oranges', 'Grapes'];
+  var pages = ['Mikhail Bakunin', 'Emma Goldman', 'Noam Chomsky']
+  var reason = [
+    'Fixing typo',
+    'Moving things around',
+    '',
+    'Reverting possible vandalism',
+    ''
+  ]
+
+  var pickRandom = function (array) {
+    var n = Math.floor( Math.random() * (array.length) );
+    return array[n];
+  }
+
+  var pickBytes = function () {
+    var isPositive = (Math.random() > 0.5) ? true : false;
+    var bytes = Math.floor(Math.random() * 1024);
+    if (isPositive) {
+      return bytes;
+    } else {
+      return bytes * -1;
+    }
+  }
+
+  var d = new Date();
+  console.log(d.toLocaleTimeString());
+
+  d.setSeconds(d.getSeconds() - 10000);
+  console.log(d.toLocaleTimeString());
+
+  for (var i = 0; i < 100; i++) {
+    var b = pickBytes();
+    var bytesClass = (b > 0) ? 'green' : 'red';
+    var u = pickRandom(users);
+    var p = pickRandom(pages);
+    var t = d.toLocaleTimeString();
+    var r = pickRandom(reason);
+    d.setSeconds(d.getSeconds() - (Math.random() * 10000));
+
+    var html = '<li>' +
+      '(' +
+      '<a href="#">diff</a> | <a href="#">hist</a>' +
+      ') . . ' +
+      '<a href="#">' + p + '</a>; ' + t + ' . . ' +
+      '<span class="'+bytesClass+'">(' + b + ')</span> . . ' +
+      '<a href="#">' + u + '</a> (<a href="#">talk</a> | <a href="#">contribs</a>)' +
+      ' . . ' +
+      '(' + r + ')' +
+    '</li>'
+
+    $('#timeline-list').append(html)
+  }
+});

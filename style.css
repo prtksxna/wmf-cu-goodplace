@@ -174,3 +174,6 @@ table.check td.highlight {
   font-weight: bold;
   margin-top: -10px;
 }
+
+.green {color: #006400;}
+.red {color: #8b0000;}
