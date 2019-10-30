@@ -79,7 +79,7 @@ $(function(){
     $('#look-ip').addClass('active');
   });
 
-console.log(111);
+console.log();
   if ( $('#thestuff').length < 1 ) return false;
   $('#thestuff').hide();
   submit.$element.click(function () {
@@ -298,6 +298,8 @@ $(function() {
 });
 
 $(function () {
+  if ( $('#timeline-list').length < 1 ) return false;
+
   var users = ['Apples', 'Oranges', 'Grapes'];
   var pages = ['Mikhail Bakunin', 'Emma Goldman', 'Noam Chomsky']
   var reason = [
@@ -339,19 +341,31 @@ $(function () {
       '(' +
       '<a href="#">diff</a> | <a href="#">hist</a>' +
       ') . . ' +
-      '<a href="#">' + p + '</a>; ' + t + ' . . ' +
+      '<a href="#" class="hoo" data-data="'+p+'">' + p + '</a>; ' + t + ' . . ' +
       '<span class="'+bytesClass+'">(' + b + ')</span> . . ' +
-      '<a href="#">' + u + '</a> (<a href="#">talk</a> | <a href="#">contribs</a>)' +
+      '<a href="#" class="hoo" data-data="'+u+'">' + u + '</a> (<a href="#">talk</a> | <a href="#">contribs</a>)' +
       ' . . ' +
       '(' + r + ')' +
     '</li>'
 
     $('#timeline-list').append(html)
   }
-});
-
-$(function () {
 
 
+  $('#timeline-list a.hoo').on('mouseover',function () {
+    var className = $(this).attr('data-data');
+    var $pills = $('[data-data="' + className + '"]' );
+
+    $pills.addClass('highlight');
+    $pills.parent('li').addClass('highlight');
+  });
+
+  $('#timeline-list a.hoo').on('mouseout',function () {
+    var className = $(this).attr('data-data');
+    var $pills = $('[data-data="' + className + '"]' );
+
+    $pills.removeClass('highlight');
+    $pills.parent('li').removeClass('highlight');
+  });
 
 });
