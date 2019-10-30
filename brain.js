@@ -106,22 +106,23 @@ $(function () {
 // Filter form
   var users = new OO.ui.FieldLayout(
     new OO.ui.TagMultiselectWidget( {
-      placeholder: 'Add users or IP addresses',
+      placeholder: 'Usernames',
       allowArbitrary: true,
-      selected: [ 'Oranges' ]
+      selected: [ ]
     } ), {
       align: 'top',
-      label: 'Usernames'
+      label: 'Hide the following users'
     }
   );
 
   var pages = new OO.ui.FieldLayout(
     new OO.ui.TagMultiselectWidget( {
       allowArbitrary: true,
-      selected: [ 'Mikhail Bakunin', 'Emma Goldman', 'Noam Chomsky' ]
+      selected: [],
+      placeholder: 'Page name'
     } ), {
       align: 'top',
-      label: 'Pages',
+      label: 'Hide the following pages',
     }
   );
 
@@ -186,7 +187,7 @@ $(function () {
     } ),
     {
      align: 'top',
-     label: 'Browsers'
+     label: 'Hide the following browsers'
     }
   );
 
