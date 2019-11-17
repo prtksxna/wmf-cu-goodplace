@@ -82,8 +82,13 @@ $(function(){
 console.log();
   if ( $('#thestuff').length < 1 ) return false;
   $('#thestuff').hide();
+  $('.loading-animation').hide();
   submit.$element.click(function () {
-    $('#thestuff').show();
+    $('.loading-animation').show();
+    window.setTimeout(function () {
+      $('.loading-animation').hide();
+      $('#thestuff').show();
+    }, 2000);
   })
 });
 

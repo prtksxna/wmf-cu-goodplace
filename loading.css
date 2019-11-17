@@ -1,0 +1,75 @@
+.loading-animation {
+  white-space: nowrap;
+  text-align: center;
+  margin-top: 50px;
+}
+.loading-animation .bounce,
+.loading-animation:before,
+.loading-animation:after {
+  content: '';
+  background-color: #72777d;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border-radius: 100%;
+  -webkit-animation: bounce-delay 1600ms infinite ease-in-out both;
+  animation: bounce-delay 1600ms infinite ease-in-out both;
+  -webkit-animation-delay: -160ms;
+  animation-delay: -160ms;
+}
+.loading-animation:before {
+  margin-right: 0.25em;
+  -webkit-animation-delay: -330ms;
+  animation-delay: -330ms;
+}
+.loading-animation:after {
+  margin-left: 0.25em;
+  -webkit-animation-delay: 0ms;
+  animation-delay: 0ms;
+}
+.loading-animation--small .bounce,
+.loading-animation--small:before,
+.loading-animation--small:after {
+  width: 0.7518797em;
+  height: 0.7518797em;
+}
+.loading-animation--inverted .bounce,
+.loading-animation--inverted:before,
+.loading-animation--inverted:after {
+  background-color: #c8ccd1;
+}
+@-webkit-keyframes bounce-delay {
+  0%,
+  50%,
+  100% {
+    -webkit-transform: scale(0.625);
+  }
+  20% {
+    opacity: 0.87;
+    -webkit-transform: scale(1);
+  }
+}
+@-moz-keyframes bounce-delay {
+  0%,
+  50%,
+  100% {
+    -moz-transform: scale(0.625);
+  }
+  20% {
+    opacity: 0.87;
+    -moz-transform: scale(1);
+  }
+}
+@keyframes bounce-delay {
+  0%,
+  50%,
+  100% {
+    -ms-transform: scale(0.625);
+    transform: scale(0.625);
+  }
+  20% {
+    opacity: 0.87;
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}

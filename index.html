@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Special:Investigate</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="loading.css">
 
     <script src="res/jquery.min.js"></script>
     <script src="res/oojs.min.js"></script>
@@ -30,6 +31,10 @@
       <form id="ip-form">
         <h2>Lookup IP addresses (ranges) and their activity</h2>
       </form>
+
+      <div class="loading loading-animation">
+        <div class="bounce"></div>
+      </div>
 
       <div id="thestuff">
         <ul class="tabs">
