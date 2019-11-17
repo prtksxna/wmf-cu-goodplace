@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Special:Investigate</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="res/jquery.min.js"></script>
+    <script src="res/oojs.min.js"></script>
+    <script src="res/oojs-ui.js"></script>
+    <script src="res/oojs-ui-wikimediaui.js"></script>
+
+    <link rel="stylesheet" href="res/oojs-ui-wikimediaui.css">
+
+    <script src="brain.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Special:Investigate</h1>
+
+      <form id="form">
+        <h2>Lookup users and their activity</h2>
+      </form>
+
+      <form id="ip-form">
+        <h2>Lookup IP addresses (ranges) and their activity</h2>
+      </form>
+
+      <ul class="tabs">
+        <li><a href="index.html">Preliminary check</a></li>
+        <li><a href="#" class="active">Compare</a></li>
+        <li><a href="timeline.html">Timeline</a></li>
+      </ul>
+
+      <form id="timefilters">
+        <h2>
+          Filters
+          <a href="javascript:void(0);" id="filter-toggle">
+            <img src="res/themes/wikimediaui/images/indicators/down.svg" alt="">
+          </a>
+        </h2>
+
+        <div id="timefilters-container"></div>
+      </form>
+
+      <br><br>
+
+      <div class="notice error">
+        <img src="res/themes/wikimediaui/images/icons/funnel-ltr.svg" alt="" style="display: inline-block;float:left;padding-right: 10px;margin-top: -5px;">
+        There is no data to show for these filter settings. Try removing a few filters or resetting.
+        <a href="#">Remove all filters</a>
+      </div>
+
+      <script type="text/javascript">
+      $(function () {
+        $('#timefilters-container').show();
+      });
+      </script>
+
+    </main>
+  </body>
+</html>

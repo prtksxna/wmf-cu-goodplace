@@ -175,6 +175,15 @@ table.check td.highlight {
   margin-top: -10px;
 }
 
+.error {
+  border-color: #b32424;
+  background: #fee7e6;
+}
+
+.error a {
+  background-color: #d33;
+}
+
 .green {color: #006400;}
 .red {color: #8b0000;}
 .gray{ color: gray;}
