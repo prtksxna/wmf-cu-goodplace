@@ -38,7 +38,9 @@ main {
 form {
   border: 1px solid #a2a9b1;
   border-radius: 2px;
-  padding: 20px;
+}
+.inner {
+  margin: 20px;
 }
 
 .user-wikitext,
