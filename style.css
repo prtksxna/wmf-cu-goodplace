@@ -65,6 +65,11 @@ ul.tabs li a.active {
   border-color: #36c;
 }
 
+ul.tabs li a.disabled {
+  pointer-events: none;
+  color: #a2a9b1;
+}
+
 table.check {
   width: 960px;
   border-left: 1px solid #72777d;

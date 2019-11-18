@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Special:Investigate</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="res/jquery.min.js"></script>
+    <script src="res/oojs.min.js"></script>
+    <script src="res/oojs-ui.js"></script>
+    <script src="res/oojs-ui-wikimediaui.js"></script>
+
+    <link rel="stylesheet" href="res/oojs-ui-wikimediaui.css">
+
+    <script src="brain.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Special:Investigate</h1>
+
+      <form id="form">
+        <h2>Lookup users and their activity</h2>
+      </form>
+
+      <form id="ip-form">
+        <h2>Lookup IP addresses (ranges) and their activity</h2>
+      </form>
+
+      <ul class="tabs">
+        <li><a href="index.html" class="disabled">Preliminary check</a></li>
+        <li><a href="#" class="active">Compare</a></li>
+        <li><a href="timeline.html">Timeline</a></li>
+      </ul>
+
+      <form id="timefilters">
+        <h2>
+          Filters
+          <a href="javascript:void(0);" id="filter-toggle">
+            <img src="res/themes/wikimediaui/images/indicators/down.svg" alt="">
+          </a>
+        </h2>
+
+        <div id="timefilters-container"></div>
+      </form>
+
+      <br><br>
+
+      <table class="check" cellspacing="0" cellpadding="0">
+        <tr>
+          <th>IP</th>
+          <th>Date</th>
+          <th>Username</th>
+          <th>Browser</th>
+          <th>OS</th>
+          <th>Device</th>
+        </tr>
+        <tr class="main">
+          <td rowspan="3" class="user">
+            1.1.1.1
+            <br>
+            <small>
+              2 users <br>
+              23 edits
+            </small>
+          </td>
+          <td data-data="d-12aug11am">August 12, 11:00</td>
+          <td data-data="u-unregistered">
+            <em>Unregistered</em>
+          </td>
+          <td data-data="b-c65">Chrome 65</td>
+          <td data-data="o-w10">Windows 10</td>
+          <td><img src="laptop.svg" alt=""> </td>
+        </tr>
+        <tr>
+          <td data-data="d-12aug1pm">August 12, 13:00</td>
+          <td data-data="u-apples">
+            <a href="#">Apples</a>
+          </td>
+          <td data-data="b-htc">HTC Browser</td>
+          <td data-data="o-a6">Android 6.0</td>
+          <td><img src="phone.svg" alt=""> </td>
+        </tr>
+        <tr>
+          <td data-data="d-13aug9am">August 13, 9:00</td>
+          <td data-data="u-grapes">
+            <a href="#">Grapes</a>
+          </td>
+          <td data-data="b-f44">Firefox 44</td>
+          <td data-data="o-w10">Windows 10</td>
+          <td><img src="laptop.svg" alt=""> </td>
+        </tr>
+
+        <tr class="main">
+          <td class="user">
+            1.1.1.42
+            <br>
+            <small>
+              0 users <br>
+              503 edits
+            </small>
+          </td>
+          <td data-data="d-12aug11am">August 12, 11:02</td>
+          <td data-data="u-unregistered">
+            <em>Unregistered</em>
+          </td>
+          <td data-data="b-c65">Chrome 65</td>
+          <td data-data="o-w10">Windows 10</td>
+          <td><img src="laptop.svg" alt=""> </td>
+        </tr>
+
+        <tr class="main">
+          <td rowspan="2"  class="user">
+            1.1.1.9
+            <br>
+            <small>
+              1 user <br>
+              8 edits
+            </small>
+          </td>
+          <td data-data="d-12aug11am">12 August, 11:25</td>
+          <td data-data="u-unregistered">
+            <em>Unregistered</em>
+          </td>
+          <td data-data="b-s8">Safari 8.5</td>
+          <td data-data="o-ios13">iOS 13</td>
+          <td><img src="phone.svg" alt=""> </td>
+        </tr>
+        <tr>
+          <td data-data="d-12aug12am">12 August, 12:08</td>
+          <td data-data="u-grapes">
+            <a href="#">Grapes</a>
+          </td>
+          <td data-data="b-c65">Chrome 66</td>
+          <td data-data="o-w10">Windows 10</td>
+          <td><img src="laptop.svg" alt=""> </td>
+        </tr>
+      </table>
+
+      <div class="notice">
+        <img src="res/copy.svg" alt="" style="display: inline-block;float:left;padding-right: 10px;margin-top: -5px;">
+        Would you like to copy this information as a Wikitext table?
+        <a href="#">Copy</a>
+      </div>
+
+    </main>
+  </body>
+</html>
