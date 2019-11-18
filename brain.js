@@ -25,7 +25,8 @@ $(function(){
     {
       align: 'inline',
       label: 'Include all users who are using the same IPs as the selected users',
-      help: 'What does this setting do??'
+      help: 'This option will bring up all user accounts that have edited or committed any actions from the same IP addresses as the given users.',
+      helpInline: true
     }
   );
 
