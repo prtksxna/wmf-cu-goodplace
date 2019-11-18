@@ -11,13 +11,12 @@ $(function(){
 
   var users = new OO.ui.FieldLayout(
     new OO.ui.TagMultiselectWidget( {
-      placeholder: 'Add users',
+      placeholder: 'JohnSmith or 1.1.1.42',
       allowArbitrary: true,
       selected: [ 'Apples', 'Oranges', 'Grapes' ]
     } ), {
       align: 'top',
-      label: 'Usernames',
-      help: 'Enter users that you want to investigate, alternatively enter an IP address or range to see all users using those addresses.'
+      label: 'Usernames, IP addresses or  IP ranges',
     }
   );
 
