@@ -384,3 +384,29 @@ $(function () {
   });
 
 });
+
+$(function(){
+  $('.filter').on('mouseover', function () {
+    window.setTimeout(function () {
+      $('.highlight').addClass('nearfilter');
+    },1);
+  });
+
+  $('.filter').on('mouseout', function () {
+    window.setTimeout(function () {
+      $('.nearfilter').removeClass('nearfilter');
+    },1);
+  });
+
+  $('.pin').on('click', function () {
+    $(this).toggleClass('activepin');
+
+    if ( $(this).hasClass('activepin') ) {
+      $(this).css("background-color", '#36c');
+      $(this).find('img').attr('src', 'res/themes/wikimediaui/images/icons/pushPin-white.svg')
+    } else {
+      $(this).css("background-color", '#fff');
+      $(this).find('img').attr('src', 'res/themes/wikimediaui/images/icons/pushPin-progressive.svg')
+    }
+  });
+})

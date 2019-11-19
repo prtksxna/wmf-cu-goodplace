@@ -152,12 +152,27 @@ table.check td[data-data^="d-"] small {
 
 table.check tr.highlight td,
 table.check td.highlight-user {
+  transition: background-color 200ms ease;
   background: #fef6e7 !important;
 }
 table.check tr.highlight td.highlight,
 table.check td.highlight {
+  transition: background-color 200ms ease;
   background-color: #fc3 !important;
 }
+
+table.check tr.highlight.nearfilter td,
+table.check tr.main.highlight.nearfilter td {
+  transition: background-color 200ms ease;
+  background: #fee7e6 !important;
+}
+
+table.check tr.highlight.nearfilter td.highlight.nearfilter {
+  transition: background-color 200ms ease;
+  background-color: #d33 !important;
+}
+
+
 
 
 .notice {
@@ -210,4 +225,28 @@ table.check td.highlight {
 
 #timeline-list li.highlight {
   background: #fef6e7;
+}
+
+.pinfilter {
+  opacity: 0;
+  display: block;
+  transition: opacity 200ms ease;
+}
+
+td:hover .pinfilter {
+  opacity: 1;
+}
+
+.pinfilter a {
+  display: inline-block;
+  background: white;
+  border-radius: 100px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
+
+.pinfilter a img {
+  height: 16px;
+  margin-top: 8px;
 }
