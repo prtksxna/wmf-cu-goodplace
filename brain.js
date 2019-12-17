@@ -308,6 +308,12 @@ $(function () {
 
   var users = ['Apples', 'Oranges', 'Grapes'];
   var pages = ['Mikhail Bakunin', 'Emma Goldman', 'Noam Chomsky']
+  var ips = [
+    '1.1.1.1',
+    '1.5.3.4',
+    '1.1.1.2',
+    '1.6.3.4'
+  ]
   var uas = [
     'Chrome 65 on Windows 10',
     'HTC Browser on Android 6.0',
@@ -344,6 +350,7 @@ $(function () {
     var b = pickBytes();
     var bytesClass = (b > 0) ? 'green' : 'red';
     var u = pickRandom(users);
+    var ip = pickRandom(ips);
     var ua = pickRandom(uas)
     var p = pickRandom(pages);
     var t = d.toLocaleTimeString();
@@ -357,6 +364,8 @@ $(function () {
       '<a href="#" class="hoo" data-data="'+p+'">' + p + '</a>; ' + t + ' . . ' +
       '<span class="'+bytesClass+'">(' + b + ')</span> . . ' +
       '<a href="#" class="hoo" data-data="'+u+'">' + u + '</a> (<a href="#">talk</a> | <a href="#">contribs</a>)' +
+      ' . . ' +
+      '<a href="#" class="hoo" data-data="'+ip+'">' + ip + '</a>' +
       ' . . ' +
       '<span class="gray hoo" data-data="'+ua+'">(' + ua + ')</span>' +
       ' . . ' +
