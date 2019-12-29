@@ -71,7 +71,7 @@ ul.tabs li a.disabled {
 }
 
 table.check {
-  width: 960px;
+  width: 100%;
   border-left: 1px solid #72777d;
   border-right: 1px solid #72777d;
 }
@@ -102,10 +102,12 @@ table.check td .tools {
   display: block;
   font-weight: normal;
   font-size: 10px;
+  height: 0;
 }
 
 table.check td:hover .tools {
   opacity: 1;
+  height: auto;
 }
 
 table.check th:last-child {
@@ -138,6 +140,7 @@ table.check td[data-data^="d-"] {
 }
 
 table.check td[data-data^="d-"] {
+  width: 180px;
   text-align: right;
 }
 
@@ -176,13 +179,6 @@ table.check tr.highlight.nearfilter td.highlight.nearfilter {
   transition: background-color 200ms ease;
   background-color: #d33 !important;
 }
-
-table.check code {
-  display: none;
-}
-
-
-
 
 .notice {
   width: 920px;

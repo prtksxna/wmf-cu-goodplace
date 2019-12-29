@@ -13,7 +13,7 @@ $(function(){
     new OO.ui.TagMultiselectWidget( {
       placeholder: 'JohnSmith or 1.1.1.42',
       allowArbitrary: true,
-      selected: [ 'Apples', 'Oranges', 'Grapes' ]
+      selected: [ 'Apples', '1.1.1.2', 'Grapes' ]
     } ), {
       align: 'top',
       label: 'Usernames, IP addresses or  IP ranges',
