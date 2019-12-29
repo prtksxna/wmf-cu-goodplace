@@ -93,6 +93,7 @@ table.check th {
   background-repeat: no-repeat;
   background-position: center right;
   padding-right: 21px;
+  vertical-align: middle;
 }
 
 table.check td .tools {
