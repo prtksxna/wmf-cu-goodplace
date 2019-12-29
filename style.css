@@ -180,6 +180,22 @@ table.check tr.highlight.nearfilter td.highlight.nearfilter {
   background-color: #d33 !important;
 }
 
+td.load-more-container {
+  text-align: center;
+}
+
+a.load-more {
+  text-decoration: none;
+  color: #fff;
+  background: #36c;
+  display: inline-block;
+  margin: 4px auto;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 2px;
+  font-weight: bold;
+}
+
 .notice {
   width: 920px;
   margin-top: 10px;
