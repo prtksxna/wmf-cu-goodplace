@@ -122,6 +122,10 @@ table.check td.user {
   background: #EAECF0;
 }
 
+table.check td.ip {
+  border-left: 1px solid #a2a9b1;
+}
+
 table.check td.user small {
   font-weight: normal;
 }
