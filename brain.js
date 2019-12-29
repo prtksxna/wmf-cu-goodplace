@@ -99,6 +99,7 @@ $(function () {
   // Filter toggle
   $('#filter-toggle').click(function () {
     $('#timefilters-container').slideToggle();
+    $('#comparefilters-container').slideToggle();
 
     var $img = $(this).find('img');
     if ($img.attr('src') === 'res/themes/wikimediaui/images/indicators/up.svg' ) {
@@ -108,6 +109,7 @@ $(function () {
     }
   });
   $('#timefilters-container').hide();
+  $('#comparefilters-container').hide();
 
 // Filter form
   var users = new OO.ui.FieldLayout(
@@ -156,22 +158,6 @@ $(function () {
     }
   );
 
-  var fromDate = new OO.ui.FieldLayout(
-    new OO.ui.TextInputWidget({icon:'calendar'}),
-    {
-      align: 'top',
-      label: 'From date'
-    }
-  );
-
-  var toDate = new OO.ui.FieldLayout(
-    new OO.ui.TextInputWidget({icon:'calendar'}),
-    {
-      align: 'top',
-      label: 'To date'
-    }
-  );
-
   var ua = new OO.ui.FieldLayout(
     new OO.ui.MenuTagMultiselectWidget( {
 	     allowArbitrary: false,
@@ -200,10 +186,13 @@ $(function () {
   $('#timefilters-container').append(
     users.$element,
     pages.$element,
-    //fromDate.$element,
-    //toDate.$element,
     ua.$element,
     activity.$element
+  )
+
+  $('#comparefilters-container').append(
+    users.$element,
+    ua.$element
   )
 
 });
