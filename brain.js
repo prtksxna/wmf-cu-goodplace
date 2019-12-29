@@ -87,6 +87,7 @@ console.log();
     $('.loading-animation').show();
     window.setTimeout(function () {
       $('.loading-animation').hide();
+      $('#form').hide();
       $('#thestuff').show();
     }, 2000);
   })
