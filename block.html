@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Special:Investigate</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="loading.css">
+
+    <script src="res/jquery.min.js"></script>
+    <script src="res/oojs.min.js"></script>
+    <script src="res/oojs-ui.js"></script>
+    <script src="res/oojs-ui-wikimediaui.js"></script>
+
+    <link rel="stylesheet" href="res/oojs-ui-wikimediaui.css">
+  </head>
+  <body>
+    <main>
+      <h1>Special:Investigate</h1>
+
+      <div id="">
+        <ul class="tabs">
+          <li><a href="index.html">Preliminary check</a></li>
+          <li><a href="compare.html">Compare</a></li>
+          <li><a href="timeline.html">Timeline</a></li>
+          <li class="right-tab"><a href="block.html" class="active">Block</a></li>
+        </ul>
+
+        <form class="block-form" style="width:600px;">
+          <h2>Block</h2>
+
+          <p>
+            Selected accounts will be blocked indefinitely, with autoblocking of
+            IP addresses enabled and account creation disabled. IP addresses
+            will be blocked for one week for anonymous users only and account
+            creation will be disabled
+          </p>
+
+          <span class="user-select"></span>
+
+          <br>
+
+          <span class="replace-user"></span>
+
+          <span class="user-wikitext"></span>
+
+          <br>
+
+          <span class="replace-talk"></span>
+
+          <span class="talk-wikitext"></span>
+
+          <br>
+
+          <span class="prevent-editing"></span>
+
+          <br>
+
+          <span class="prevent-email"></span>
+
+          <br>
+
+          <span class="reason"></span>
+        </form>
+      </div>
+
+    </main>
+
+    <script type="text/javascript">
+      $(function () {
+        var users = new OO.ui.FieldLayout(
+          new OO.ui.TagMultiselectWidget( {
+            placeholder: 'JohnSmith or 1.1.1.42',
+            allowArbitrary: true,
+            selected: [ 'Apples', '1.1.1.2', 'Grapes' ]
+          } ), {
+            align: 'top',
+            label: 'Usernames, IP addresses or  IP ranges',
+          }
+        );
+        $('.user-select').append(users.$element);
+
+        var replaceUser = new OO.ui.FieldLayout(
+          new OO.ui.CheckboxInputWidget(),
+          {
+            align: 'inline',
+            label: 'Replace user pages with:',
+          }
+        );
+        $('.replace-user').append(replaceUser.$element);
+
+        $('.user-wikitext').append(
+          new OO.ui.MultilineTextInputWidget().$element
+        )
+
+        var replaceTalk = new OO.ui.FieldLayout(
+          new OO.ui.CheckboxInputWidget(),
+          {
+            align: 'inline',
+            label: 'Replace talk pages with:',
+          }
+        );
+        $('.replace-talk').append(replaceTalk.$element);
+
+        $('.talk-wikitext').append(
+          new OO.ui.MultilineTextInputWidget().$element
+        )
+
+
+        var preventEditing = new OO.ui.FieldLayout(
+          new OO.ui.CheckboxInputWidget(),
+          {
+            align: 'inline',
+            label: 'Prevent from editing their own talk page while blocked',
+          }
+        );
+        $('.prevent-editing').append(preventEditing.$element);
+
+        var preventEmail = new OO.ui.FieldLayout(
+          new OO.ui.CheckboxInputWidget(),
+          {
+            align: 'inline',
+            label: 'Prevent from sending email',
+          }
+        );
+        $('.prevent-email').append(preventEmail.$element);
+
+
+        var reason = new OO.ui.FieldLayout(
+          new OO.ui.MultilineTextInputWidget(),
+          {
+            align: 'top',
+            label: 'Reason'
+          }
+        );
+
+        var submit = new OO.ui.ButtonWidget( {
+          label: 'Submit',
+          flags: [
+            'primary',
+            'progressive'
+          ]
+        } );
+
+        $('.reason').append(
+          reason.$element,
+          '<br>',
+          submit.$element
+        );
+      })
+    </script>
+  </body>
+</html>

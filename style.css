@@ -41,6 +41,13 @@ form {
   padding: 20px;
 }
 
+.user-wikitext,
+.talk-wikitext {
+  display: block;
+  margin-left: 25px;
+  margin-top: 5px;
+}
+
 ul.tabs {
   list-style: none;
   padding: 0;
@@ -49,6 +56,10 @@ ul.tabs {
 
 ul.tabs li {
   display: inline-block;
+}
+
+ul.tabs li.right-tab {
+  float: right;
 }
 
 ul.tabs li a {
