@@ -142,8 +142,8 @@ table.check td[data-data^="d-"] {
 }
 
 table.check td[data-data^="ip-"] {
-  width: 300px;
-  padding-left: 20px;
+  width: 120px;
+  padding-left: 10px;
 }
 
 table.check td[data-data^="w-"] {
@@ -175,6 +175,10 @@ table.check tr.main.highlight.nearfilter td {
 table.check tr.highlight.nearfilter td.highlight.nearfilter {
   transition: background-color 200ms ease;
   background-color: #d33 !important;
+}
+
+table.check code {
+  display: none;
 }
 
 
