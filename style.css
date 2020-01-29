@@ -282,3 +282,7 @@ td:hover .pinfilter {
   height: 16px;
   margin-top: 8px;
 }
+
+.user_icon_col {
+  width: 100px;
+}

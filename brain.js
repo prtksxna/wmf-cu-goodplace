@@ -409,3 +409,35 @@ $(function(){
     }
   });
 })
+
+
+// Info icons
+$( function () {
+  var usersPop = new OO.ui.PopupButtonWidget({
+    icon: 'info',
+    framed: false,
+    label: 'Other users using this IP',
+    invisibleLabel: true,
+    popup: {
+      head: true,
+      label: 'Other users using this IP',
+      $content: $('<p>Lorem ipsum dolor sit amet</p>'),
+      padded: true
+    }
+  });
+  $("#users_info").append(usersPop.$element);
+
+  var editsPop = new OO.ui.PopupButtonWidget({
+    icon: 'info',
+    framed: false,
+    label: 'Total edits made using this IP',
+    invisibleLabel: true,
+    popup: {
+      head: true,
+      label: 'Total edits made using this IP',
+      $content: $('<p>Lorem ipsum dolor sit amet</p>'),
+      padded: true
+    }
+  });
+  $("#edits_info").append(editsPop.$element);
+});
