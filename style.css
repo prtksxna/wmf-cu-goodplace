@@ -286,3 +286,12 @@ td:hover .pinfilter {
 .user_icon_col {
   width: 100px;
 }
+
+.add_users span {
+  font-size: 11px;
+  display: none;
+}
+
+.add_users:hover span {
+  display: block;
+}
