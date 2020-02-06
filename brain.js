@@ -416,11 +416,11 @@ $( function () {
   var usersPop = new OO.ui.PopupButtonWidget({
     icon: 'info',
     framed: false,
-    label: 'Other users using this IP',
+    label: 'Total users using this IP',
     invisibleLabel: true,
     popup: {
       head: true,
-      label: 'Other users using this IP',
+      label: 'Total users using this IP',
       $content: $('<p>Lorem ipsum dolor sit amet</p>'),
       padded: true
     }
