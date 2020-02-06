@@ -61,6 +61,20 @@
 
           <span class="reason"></span>
         </form>
+
+        <br><br>
+
+        <form class="block-form" style="width:600px;">
+          <h2>CIDR</h2>
+
+          <span id="list-of-ips"></span>
+
+          <p>
+            <span style="display:block; float: left; margin-top:4px;">Common CIDR:&nbsp;
+            <strong>1.1.1.1/256</strong></span>
+            <img src="res/copy.svg" alt="" style="display: inline-block;padding-left: 10px;">
+          </p>
+        </form>
       </div>
 
     </main>
@@ -146,6 +160,17 @@
           '<br>',
           submit.$element
         );
+
+        // CIDR
+        var list = new OO.ui.FieldLayout(
+          new OO.ui.MultilineTextInputWidget(),
+          {
+            align: 'top',
+            label: 'Find common range and affected IP addresses for a list of addresses:',
+          }
+        );
+
+        $('#list-of-ips').append(list.$element);
       })
     </script>
   </body>
