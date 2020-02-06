@@ -13,7 +13,7 @@ $(function(){
     new OO.ui.TagMultiselectWidget( {
       placeholder: 'JohnSmith or 1.1.1.42',
       allowArbitrary: true,
-      selected: [ 'Apples', '1.1.1.2', 'Grapes' ]
+      selected: [ 'NamelessNumbat', '103.208.220.142' ]
     } ), {
       align: 'top',
       label: 'Usernames, IP addresses or  IP ranges',
@@ -32,7 +32,7 @@ $(function(){
 
   var reason = new OO.ui.FieldLayout(
     new OO.ui.TextInputWidget({
-      value: 'Testing the tool'
+
     }),
     {
       align: 'top',
