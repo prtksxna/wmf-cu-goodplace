@@ -337,6 +337,7 @@ $(function () {
   d.setSeconds(d.getSeconds() - 10000);
 
   var timelineData = [
+    "22 January 2020",
     {
       bytes: -44,
       user: 'NamelessNumbat',
@@ -400,6 +401,7 @@ $(function () {
       time: '19:06, 22 January 2020',
       summary: ''
     },
+    "25 November 2019",
     {
       bytes: 751,
       user: 'Cwylo',
@@ -422,6 +424,12 @@ $(function () {
 
   for (var i = 0; i < timelineData.length; i++) {
     var d = timelineData[i];
+
+    if (d === d.toString()){
+      $('#timeline-list').append('<h3 style="margin-left: -30px;">' + d + '</h3>')
+      continue;
+    }
+
     var b = d.bytes;
     var bytesClass = (b > 0) ? 'green' : 'red';
     var u = d.user;
