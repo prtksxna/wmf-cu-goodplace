@@ -255,7 +255,7 @@ a.load-more {
 
 #timeline-list span.highlight,
 #timeline-list a.highlight {
-  background: #fc3;
+  background: rgba(255,204,51,0.5);
 }
 
 #timeline-list li.highlight {

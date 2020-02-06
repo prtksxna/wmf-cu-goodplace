@@ -336,16 +336,101 @@ $(function () {
   var d = new Date();
   d.setSeconds(d.getSeconds() - 10000);
 
-  for (var i = 0; i < 100; i++) {
-    var b = pickBytes();
+  var timelineData = [
+    {
+      bytes: -44,
+      user: 'NamelessNumbat',
+      ip: '103.208.220.142',
+      ua: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0) Gecko/20100101 Firefox/71.0',
+      page: 'The Good Place',
+      time: '19:14, 22 January 2020',
+      summary: 'fixing vandalism'
+    },
+    {
+      bytes: -6,
+      user: 'NamelessNumbat',
+      ip: '76.21.23.75',
+      ua: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.18362',
+      page: 'The Good Place',
+      time: '19:13, 22 January 2020',
+      summary: 'Undo revision 19 by SecretServal (talk)'
+    },
+    {
+      bytes: 9,
+      user: 'SecretServal',
+      ip: '76.21.23.75',
+      ua: 'Mozilla/5.0 (Android 10; Mobile; rv:68.0) Gecko/68.0 Firefox/68.0',
+      page: 'The Good Place',
+      time: '19:12, 22 January 2020',
+      summary: 'Entering The Good Place'
+    },
+    {
+      bytes: 82,
+      user: 'NamelessNumbat',
+      ip: '76.21.23.75',
+      ua: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.18362',
+      page: 'Frozen yogurt',
+      time: '19:10, 22 January 2020',
+      summary: 'Created page with "Frozen yoghurt, sometimes spelled "yogurt", is a type of cold dairy-based dessert."'
+    },
+    {
+      bytes: 23,
+      user: 'NamelessNumbat',
+      ip: '76.21.23.75',
+      ua: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.18362',
+      page: 'Wednesday',
+      time: '19:10, 22 January 2020',
+      summary: ''
+    },
+    {
+      bytes: 18,
+      user: 'NamelessNumbat',
+      ip: '76.21.23.75',
+      ua: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.18362',
+      page: 'User:NamelessNumbat',
+      time: '19:09, 22 January 2020',
+      summary: ''
+    },
+    {
+      bytes: -43,
+      user: 'SecretServal',
+      ip: '76.21.23.75',
+      ua: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0) Gecko/20100101 Firefox/71.0',
+      page: 'The Good Place',
+      time: '19:06, 22 January 2020',
+      summary: ''
+    },
+    {
+      bytes: 751,
+      user: 'Cwylo',
+      ip: '76.21.23.75',
+      ua: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:69.0) Gecko/20100101 Firefox/69.0',
+      page: 'The Good Place',
+      time: '19:16, 25 November 2019',
+      summary: 'created page'
+    },
+    {
+      bytes: 18,
+      user: 'NamelessNumbat',
+      ip: '76.21.23.75',
+      ua: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:69.0) Gecko/20100101 Firefox/69.0',
+      page: 'User:NamelessNumbat',
+      time: '19:11, 25 November 2019',
+      summary: 'Created page with "TOTALLY NOT A SOCK"'
+    },
+  ]
+
+  for (var i = 0; i < timelineData.length; i++) {
+    var d = timelineData[i];
+    var b = d.bytes;
     var bytesClass = (b > 0) ? 'green' : 'red';
-    var u = pickRandom(users);
-    var ip = pickRandom(ips);
-    var ua = pickRandom(uas)
-    var p = pickRandom(pages);
-    var t = d.toLocaleTimeString();
-    var r = pickRandom(reason);
-    d.setSeconds(d.getSeconds() - (Math.random() * 10000));
+    var u = d.user;
+    var ip = d.ip;
+    var ua = d.ua;
+    var p = d.page;
+    var t = d.time;
+    var r = d.summary;
+    //d.setSeconds(d.getSeconds() - (Math.random() * 10000));
 
     var html = '<li>' +
       '(' +
