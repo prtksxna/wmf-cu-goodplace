@@ -426,7 +426,7 @@ $(function () {
     "25 November 2019",
     {
       bytes: 751,
-      user: 'Cwylo',
+      user: 'Michael',
       ip: '76.21.23.75',
       ua: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:69.0) Gecko/20100101 Firefox/69.0',
       page: 'The Good Place',
