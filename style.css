@@ -329,3 +329,24 @@ td:hover .pinfilter {
   padding: 7px 13px;
   font-weight: bold;
 }
+
+.showbutton {
+  display: block;
+  font-size: smaller;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-top: 10px;
+  margin-bottom: 3px;
+  background: #36c;
+  color: #fff;
+  padding: 4px;
+}
+
+.showbutton.disabled {
+  display: none;
+  background: #C8CCD2;
+}
+
+table.check td:hover .showbutton.disabled {
+  display: block;
+}
