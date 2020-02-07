@@ -299,6 +299,12 @@ td:hover .pinfilter {
   display: block;
 }
 
+.context {
+  margin-top: -10px;
+  font-size: smaller;
+  margin-bottom: 30px;
+}
+
 .ni_button {
   float: right;
   display: inline-block;
