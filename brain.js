@@ -580,7 +580,7 @@ $(function () {
     alert('All users on the IP have already been added');
   });
 
-  $('.showbutton').click(function () {
+  $('.showbutton').not('.disabled').click(function () {
     window.localStorage.setItem('show', 'yes');
     showOthers();
   });
