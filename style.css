@@ -140,7 +140,7 @@ table.check td.user {
 }
 
 table.check td.ip {
-  
+
 }
 
 table.check td.user small {
@@ -297,4 +297,16 @@ td:hover .pinfilter {
 
 .add_users:hover span {
   display: block;
+}
+
+.ni_button {
+  float: right;
+  display: inline-block;
+  margin-top: 10px;
+  background: #F8F9FA;
+  border: 1px solid #A2A9B1;
+  color: #222;
+  border-radius: 2px;
+  padding: 7px 13px;
+  font-weight: bold;
 }
