@@ -51,7 +51,7 @@ $(function(){
 
   $('#form').append(
     users.$element,
-    includeIPs.$element,
+    //includeIPs.$element,
     reason.$element,
     '<br>',
     submit.$element
