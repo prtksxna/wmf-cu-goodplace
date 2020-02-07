@@ -83,11 +83,17 @@
 
     <script type="text/javascript">
       $(function () {
+        if (window.localStorage.getItem('show') === 'yes') {
+          blockSelect = ['NamelessNumbat', '103.208.220.142', '76.21.23.75']
+        } else {
+          blockSelect = ['NamelessNumbat', '103.208.220.142']
+        }
+
         var users = new OO.ui.FieldLayout(
           new OO.ui.TagMultiselectWidget( {
             placeholder: 'JohnSmith or 1.1.1.42',
             allowArbitrary: true,
-            selected: [ 'Apples', '1.1.1.2', 'Grapes' ]
+            selected: blockSelect
           } ), {
             align: 'top',
             label: 'Usernames, IP addresses or  IP ranges',
