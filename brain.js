@@ -393,6 +393,15 @@ $(function () {
       summary: ''
     },
     {
+      bytes: -42,
+      user: '76.21.23.75',
+      ip: '76.21.23.75',
+      ua: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.18362',
+      page: 'The Good Place',
+      time: '19:08, 22 January 2020',
+      summary: ''
+    },
+    {
       bytes: -43,
       user: 'SecretServal',
       ip: '76.21.23.75',
@@ -400,6 +409,15 @@ $(function () {
       page: 'The Good Place',
       time: '19:06, 22 January 2020',
       summary: ''
+    },
+    {
+      bytes: -43,
+      user: '76.21.23.75',
+      ip: '76.21.23.75',
+      ua: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0) Gecko/20100101 Firefox/71.0',
+      page: 'The Good Place',
+      time: '19:06, 22 January 2020',
+      summary: 'fact check'
     },
     "25 November 2019",
     {
