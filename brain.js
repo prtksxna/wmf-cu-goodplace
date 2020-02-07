@@ -363,7 +363,8 @@ $(function () {
       ua: 'Mozilla/5.0 (Android 10; Mobile; rv:68.0) Gecko/68.0 Firefox/68.0',
       page: 'The Good Place',
       time: '19:12, 22 January 2020',
-      summary: 'Entering The Good Place'
+      summary: 'Entering The Good Place',
+      cssclass: 'init-hide'
     },
     {
       bytes: 82,
@@ -399,7 +400,8 @@ $(function () {
       ua: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.18362',
       page: 'The Good Place',
       time: '19:08, 22 January 2020',
-      summary: ''
+      summary: '',
+      cssclass: 'init-hide'
     },
     {
       bytes: -43,
@@ -408,7 +410,8 @@ $(function () {
       ua: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0) Gecko/20100101 Firefox/71.0',
       page: 'The Good Place',
       time: '19:06, 22 January 2020',
-      summary: ''
+      summary: '',
+      cssclass: 'init-hide'
     },
     {
       bytes: -43,
@@ -417,7 +420,8 @@ $(function () {
       ua: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:71.0) Gecko/20100101 Firefox/71.0',
       page: 'The Good Place',
       time: '19:06, 22 January 2020',
-      summary: 'fact check'
+      summary: 'fact check',
+      cssclass: 'init-hide'
     },
     "25 November 2019",
     {
@@ -427,7 +431,8 @@ $(function () {
       ua: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:69.0) Gecko/20100101 Firefox/69.0',
       page: 'The Good Place',
       time: '19:16, 25 November 2019',
-      summary: 'created page'
+      summary: 'created page',
+      cssclass: 'init-hide'
     },
     {
       bytes: 18,
@@ -456,9 +461,10 @@ $(function () {
     var p = d.page;
     var t = d.time;
     var r = d.summary;
+    var cssclass = d.cssclass;
     //d.setSeconds(d.getSeconds() - (Math.random() * 10000));
 
-    var html = '<li>' +
+    var html = '<li class='+ cssclass +'>' +
       '(' +
       '<a href="#">diff</a> | <a href="#">hist</a>' +
       ') . . ' +
@@ -552,3 +558,30 @@ $( function () {
   });
   $("#edits_info").append(editsPop.$element);
 });
+
+// IP / User buttons
+$(function () {
+  showOthers = function () {
+    var show = window.localStorage.getItem('show');
+    if ( show === 'yes' ) {
+      $('.showbutton').not('.show-user').addClass('disabled');
+      $('.init-hide').show();
+    }
+  };
+
+  showOthers();
+
+
+  $('.show-user').click(function () {
+    alert('Not implemented in prototype');
+  })
+
+  $('.showbutton.disabled').click(function () {
+    alert('All users on the IP have already been added');
+  });
+
+  $('.showbutton').click(function () {
+    window.localStorage.setItem('show', 'yes');
+    showOthers();
+  });
+})

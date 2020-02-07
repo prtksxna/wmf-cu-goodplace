@@ -350,3 +350,7 @@ td:hover .pinfilter {
 table.check td:hover .showbutton.disabled {
   display: block;
 }
+
+.init-hide {
+  display: none;
+}
