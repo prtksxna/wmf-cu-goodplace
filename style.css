@@ -155,7 +155,7 @@ table.check td.user small {
 table.check td[data-data^="b-"],
 table.check td[data-data^="o-"],
 table.check td[data-data^="d-"] {
-  width: 150px;
+/* width: 150px; */
 }
 
 table.check td[data-data^="d-"] {
@@ -308,6 +308,14 @@ td:hover .pinfilter {
   margin-top: -10px;
   font-size: smaller;
   margin-bottom: 30px;
+}
+
+.ip-info {
+  font-weight: normal;
+}
+
+.ip-col {
+  width: 200px;
 }
 
 .ni_button {
