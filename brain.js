@@ -30,6 +30,21 @@ $(function(){
     }
   );
 
+  var duration = new OO.ui.FieldLayout(
+    new OO.ui.DropdownInputWidget({
+      options: [
+        {data:'a', label:'All'},
+        {data:'a', label:'Last week'},
+        {data:'a', label:'Last 2 weeks'},
+        {data:'a', label:'Last 30 days'}
+      ]
+    }),
+    {
+      align: 'top',
+      label: 'Duration'
+    }
+  );
+
   var reason = new OO.ui.FieldLayout(
     new OO.ui.TextInputWidget({
 
@@ -51,6 +66,7 @@ $(function(){
 
   $('#form').append(
     users.$element,
+    duration.$element,
     //includeIPs.$element,
     reason.$element,
     '<br>',
@@ -464,15 +480,22 @@ $(function () {
     var cssclass = d.cssclass;
     //d.setSeconds(d.getSeconds() - (Math.random() * 10000));
 
+    if (u===ip) {
+       var usernip = '<span class="hoo" data-data="'+u+'">' + u + '</span> (<a href="#">talk</a> | <a href="#">contribs</a>)' +
+       ' . . ';
+    } else {
+      var usernip = '<a href="#" class="hoo" data-data="'+u+'">' + u + '</a> (<a href="#">talk</a> | <a href="#">contribs</a>)' +
+      ' . . ' +
+      '<span class="hoo" data-data="'+ip+'">' + ip + '</span>';
+    }
+
     var html = '<li class='+ cssclass +'>' +
       '(' +
       '<a href="#">diff</a> | <a href="#">hist</a>' +
       ') . . ' +
       '<a href="#" class="hoo" data-data="'+p+'">' + p + '</a>; ' + t + ' . . ' +
       '<span class="'+bytesClass+'">(' + b + ')</span> . . ' +
-      '<a href="#" class="hoo" data-data="'+u+'">' + u + '</a> (<a href="#">talk</a> | <a href="#">contribs</a>)' +
-      ' . . ' +
-      '<a href="#" class="hoo" data-data="'+ip+'">' + ip + '</a>' +
+      usernip +
       ' . . ' +
       '<span class="gray hoo" data-data="'+ua+'">(' + ua + ')</span>' +
       ' . . ' +
