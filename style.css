@@ -166,6 +166,7 @@ table.check td[data-data^="d-"] {
 table.check td[data-data^="ip-"] {
   width: 120px;
   padding-left: 10px;
+  font-weight: normal;
 }
 
 table.check td[data-data^="w-"] {
@@ -371,4 +372,22 @@ table.check td:hover .showbutton.disabled {
 
 .init-hide {
   display: none;
+}
+
+.green-dot {
+  height: 100%;
+  float: left;
+  margin-right: 6px;
+  width: 14px;
+  display: none;
+}
+
+.green-dot img {
+  width: 10px;
+  opacity: 0;
+}
+
+tr:hover .green-dot img{
+  display: block;
+  opacity: 1;
 }
